@@ -1,0 +1,82 @@
+.projects-root {
+  min-height: 100vh;
+  background-color: rgb(27, 27, 27);
+}
+
+.projects-title-div {
+  display: grid;
+  text-align: center;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Bubblegum+Sans&family=Bungee&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=McLaren&family=Michroma&family=Montserrat:ital,wght@0,500;1,500&family=Roboto+Condensed:ital,wght@0,529;1,529&display=swap");
+
+.projects-title-div h1 {
+  font-family: "Bungee", sans-serif;
+  text-transform: uppercase;
+  color: white;
+  top: 50px;
+  position: relative;
+  font-size: 70px;
+  letter-spacing: 6px;
+}
+
+.projects {
+  list-style-type: none;
+}
+
+.projects-more {
+  min-height: 150px;
+  text-align: center;
+}
+
+.work-link {
+  display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: x-large;
+  position: relative;
+  color: rgb(230, 230, 230);
+  text-decoration: none;
+  cursor: pointer;
+  padding: 5px;
+  border-bottom: 3px solid rgb(230, 230, 230);
+  margin-top: 20px;
+  transition: all 0.3s;
+}
+
+.work-link:hover {
+  color: rgb(27, 27, 27);
+  background-color: rgb(230, 230, 230);
+  transform: translateY(-5px);
+}
+
+@media only screen and (max-width: 1200px) {
+  .projects-title-div h1 {
+    top: 50px;
+    font-size: 50px;
+    letter-spacing: 6px;
+  }
+
+  .work-link {
+    font-size: large;
+    padding: 5px;
+    border-bottom: 2.5px solid rgb(230, 230, 230);
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .projects-title-div h1 {
+    top: 50px;
+    font-size: 40px;
+    letter-spacing: 4px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .projects-title-div h1 {
+    top: 50px;
+    font-size: 30px;
+    letter-spacing: 4px;
+  }
+}

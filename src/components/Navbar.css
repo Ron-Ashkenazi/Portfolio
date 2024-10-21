@@ -1,0 +1,151 @@
+.navbar-root {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 10;
+  display: grid;
+  align-items: center;
+}
+
+.navbar-root ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar-checkbox {
+  display: none;
+}
+
+.label-icon {
+  position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 32px;
+  width: 62px;
+  height: 62px;
+  background-color: rgb(230, 230, 230);
+  color: rgb(27, 27, 27);
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.navbar-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s;
+}
+
+.label-icon:hover {
+  scale: 1.1;
+}
+
+.lines-icon,
+.x-icon {
+  transition: all 0.4s ease;
+}
+
+.x-icon {
+  opacity: 0;
+}
+
+.navbar-checkbox:checked ~ .label-icon .lines-icon {
+  transform: translate(-50%, -50%) rotate(180deg);
+  opacity: 0;
+}
+
+.navbar-checkbox:checked ~ .label-icon .x-icon {
+  transform: translate(-50%, -50%) rotate(180deg);
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.navbar-ul {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50px);
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s, transform 0.3s ease;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.navbar-checkbox:checked ~ .navbar-ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, visibility 0s, transform 0.3s ease;
+}
+
+.navbar-ul li:nth-child(1) {
+  transform: translateY(-40px);
+}
+
+.navbar-ul li:nth-child(2) {
+  transform: translateY(-60px);
+}
+
+.navbar-ul li:nth-child(3) {
+  transform: translateY(-80px);
+}
+
+.navbar-ul li:nth-child(4) {
+  transform: translateY(-100px);
+}
+
+.navbar-ul li {
+  font-size: large;
+  color: white;
+  font-weight: 500;
+  padding: 10px 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease, transform 0.6s ease, scale 0.3s, translate 0.3s;
+}
+
+.navbar-checkbox:checked ~ .navbar-ul li {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar-ul li:hover {
+  scale: 1.2;
+  translate: 0 -4px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar-root {
+    top: 27px;
+    right: 27px;
+  }
+
+  .label-icon {
+    font-size: 21px;
+    width: 41px;
+    height: 41px;
+  }
+
+  .navbar-ul li {
+    font-size: medium;
+    padding: 7px 0;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar-root {
+    top: 25px;
+    right: 15px;
+  }
+
+  .label-icon {
+    font-size: 16px;
+    width: 31px;
+    height: 31px;
+  }
+
+  .navbar-ul li {
+    font-size: small;
+    padding: 5px 0;
+  }
+}
